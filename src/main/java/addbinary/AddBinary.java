@@ -11,7 +11,7 @@ public class AddBinary {
         int index2 = str2.length() - 1;
 
         int carry = 0;
-        while (index1 >= 0 || index2 >= 0) {
+        while (index1 >= 0 || index2 >= 0 || carry > 0) {
             int sum = carry;
             if (index1 >= 0) {
                 sum += str1.charAt(index1) - '0';
@@ -27,11 +27,6 @@ public class AddBinary {
             carry = sum / 2;
             sb.insert(0, value);
         }
-
-        if (carry > 0) {
-            sb.insert(0, carry);
-        }
-
         return sb.toString();
     }
 }
