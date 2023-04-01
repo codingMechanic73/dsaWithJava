@@ -1,5 +1,7 @@
 package mergesortedlinkedlist;
 
+import util.Node;
+
 public class SortedLinkedList {
 
     private SortedLinkedList() {}
